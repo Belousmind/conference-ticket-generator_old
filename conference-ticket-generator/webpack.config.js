@@ -12,8 +12,11 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(png|jpe?g|gif|svg|ico)$/,
+        test: /\.(png|jpe?g|gif|svg)$/,
         type: 'asset/resource',
+        generator: {
+          filename: 'assets/images/[name][ext]',
+        },
       },
       {
         test: /\.(woff|woff2|ttf|otf|eot)$/,
@@ -42,5 +45,10 @@ module.exports = {
       ],
     })
   ],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    },
+  },
   mode: 'development',
 }
