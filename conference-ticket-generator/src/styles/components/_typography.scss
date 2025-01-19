@@ -1,0 +1,25 @@
+.main-heading {
+  color: $neutral-0;
+  text-align: center;
+  font-family: Inconsolata-ExtraBold, sans-serif;
+  font-size: $font-size-60;
+  line-height: $line-height-110;
+  letter-spacing: $letter-spacing-minus-1;
+}
+
+.sub-heading {
+  color: $neutral-300;
+  text-align: center;
+  font-family: Inconsolata-Medium;
+  font-size: $font-size-24;
+  line-height: $line-height-120;
+  letter-spacing: $letter-spacing-minus-0-5;
+}
+
+label {
+  color: $neutral-0;
+  font-family: Inconsolata-Medium;
+  font-size: $font-size-20;
+  line-height: $line-height-120;
+  letter-spacing: $letter-spacing-minus-0-5;
+}

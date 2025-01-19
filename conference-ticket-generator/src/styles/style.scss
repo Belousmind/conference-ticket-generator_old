@@ -4,3 +4,8 @@
 @import './components/input';
 @import './components/button';
 @import './components/background';
+@import './components/typography';
+
+input[type="file"] {
+  display: none;
+}
