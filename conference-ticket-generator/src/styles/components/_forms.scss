@@ -1,0 +1,20 @@
+form {
+  max-width: 460px;
+  width: 100%;
+  display: grid;
+  gap: $spacing-300;
+
+  @media(max-width: 768px) {
+    max-width: 522px;
+  }
+  @media(max-width: 375px) {
+    max-width: 343px;
+  }
+
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+

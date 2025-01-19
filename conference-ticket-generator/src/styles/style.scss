@@ -5,7 +5,14 @@
 @import './components/button';
 @import './components/background';
 @import './components/typography';
+@import './components/forms';
 
 input[type="file"] {
   display: none;
+}
+
+main {
+  display: grid;
+  place-items: center;
+
 }
