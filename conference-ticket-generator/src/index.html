@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conference Ticket Generator</title>
+</head>
+<body>
+  <main>
+    <img src="./assets/images/logo-full.svg" alt="Conference ticket logo" class="logo">
+    <h1 class="main-heading">Your Journey to Coding Conf 2025 Starts Here!</h1>
+    <h2 class="sub-heading">Secure your spot at next year's biggest coding conference.</h2>
+
+    <form action="">
+      <label for="file">Upload Avatar
+        <div class="field">
+          <div class="upload-icon-container">
+            <input type="file" id="file" name="file" accept=".png, .jpg, .jpeg" />
+            <img class="upload-icon" src="./assets/images/icon-upload.svg" alt="upload icon">
+          </div>
+          <p class="instruction-text">Drag and drop or click to upload</p>
+        </div>
+      </label>
+      <div class="upload-img-container">
+         <p class="hint-text"> <img src="./assets/images/icon-info.svg" alt="info icon"> Upload your photo (JPG or PNG, max size: 500KB).</p>
+      </div>
+      
+      <label for="">Full Name</label>
+      <input type="text" id="fullname">
+  
+      <label for="">Email Address</label>
+      <input type="text" placeholder="example@email.com">
+  
+      <label for="">GitHub Username</label>
+      <input type="text" placeholder="@yourusername">
+  
+      <input type="submit" value="Generate My Ticket">
+    </form>
+  </main>
+</body>
+</html>

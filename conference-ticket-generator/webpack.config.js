@@ -10,6 +10,13 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(woff|woff2|ttf|otf|eot)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/fonts/[name][ext]',
+        },
+      },
+      {
         test: /\.scss|\.sass$/,
         use: [
           'style-loader',
