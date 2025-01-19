@@ -1,0 +1,20 @@
+input[type="submit"] {
+  cursor: pointer;
+  background-color: $orange-500;
+  border-radius: $radius-12;
+  padding: $spacing-200 $spacing-300;
+  border: none;
+  transition: 0.4s ease-out;
+  color: $neutral-900;
+  font-family: Inconsolata-ExtraBold, sans-serif;
+  font-size: $font-size-20;
+  letter-spacing: $letter-spacing-minus-0-3;
+
+  &:hover {
+    background: $orange-700;
+    box-shadow: 0px 4px 0px 0px $orange-500;
+  }
+  &:focus {
+    box-shadow: 0px 0px 0px 3px $neutral-900, 0px 0px 0px 4px $neutral-0;
+  }
+}
