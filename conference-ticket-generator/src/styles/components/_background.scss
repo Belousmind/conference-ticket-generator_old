@@ -1,3 +1,26 @@
 body {
-  background-image: url(@/assets/images/background-desktop.png);
+  background: 
+    url('@/assets/images/pattern-lines.svg'),
+    url('@/assets/images/background-desktop.png');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+
+  @media (max-width: 768px) {
+    background: 
+    url('@/assets/images/pattern-lines.svg'),
+    url('@/assets/images/background-tablet.png');
+    background-size: cover, cover;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+  }
+
+  @media (max-width: 375px) {
+    background: 
+    url('@/assets/images/pattern-lines.svg'),
+    url('@/assets/images/background-mobile.png');
+    background-size: cover, cover;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+  }
 }
