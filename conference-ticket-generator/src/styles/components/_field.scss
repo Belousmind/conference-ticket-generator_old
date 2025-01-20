@@ -43,6 +43,9 @@
 
 .upload-icon {
   position: absolute;
+  &.hidden {
+    display: none;
+  }
 }
 
 .upload-img {

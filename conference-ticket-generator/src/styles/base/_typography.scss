@@ -49,6 +49,9 @@ label {
   font-family: Inconsolata-Regular;
   font-size: 18px;
   line-height: $line-height-120;
+  &.hidden{
+    display: none;
+  }
 }
 
 .hint-text {
