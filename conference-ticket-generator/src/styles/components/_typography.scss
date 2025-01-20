@@ -62,3 +62,143 @@ label {
   gap: $spacing-100;
   margin: 0;
 }
+
+.confirmation-title {
+  color: $neutral-0;
+  text-align: center;
+  font-family: Inconsolata-ExtraBold;
+  font-size: $font-size-60;
+  line-height: $line-height-110;
+  letter-spacing: $letter-spacing-minus-1;
+  max-width: 814px;
+  margin: 0 0 $spacing-400 0;
+  @media (max-width: 768px) {
+    max-width: 814px;
+  }
+  @media(max-width: 700px) {
+    margin: 0 0 $spacing-250 0;
+    font-size: $font-size-30;
+  }
+  @media(max-width: 375px) {
+    max-width: 343px;
+  }
+  
+}
+
+.fullmane {
+  background: linear-gradient(90deg, #F57463 0%, #FFF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.confirmation-details {
+  color: $neutral-300;
+  text-align: center;
+  font-family: Inconsolata-Medium;
+  font-size: $font-size-24;
+  line-height: $line-height-120;
+  letter-spacing: $letter-spacing-minus-0-5;
+  max-width: 514px;
+  margin: 0 0 111px 0;
+
+  @media(max-width: 768px) {
+    margin: 0 0 80px 0;
+  }
+
+  @media(max-width: 375px) {
+    margin: 0 0 72px 0;
+    font-size: $font-size-20;
+    max-width: 343px;
+  }
+}
+
+.emeil {
+  color: $orange-500;
+}
+
+.event-name {
+  color: $neutral-0;
+  font-family: Inconsolata-Bold;
+  font-size: $font-size-40;
+  line-height: $line-height-110;
+  letter-spacing: $letter-spacing-minus-1;
+
+  @media (max-width: 700px) {
+    font-size: $font-size-24;
+  }
+
+}
+
+.event-data {
+  color: $neutral-300;
+  font-family: Inconsolata-Regular;
+  font-size: $font-size-18;
+  line-height: $line-height-120;
+
+  & span {
+    margin: 0 $spacing-200;
+  }
+
+  @media (max-width: 700px) {
+    font-size: $font-size-14;
+    
+    & span {
+      margin: 0 $spacing-100;
+    }
+  }
+}
+
+.speaker-name {
+  grid-column: 2;
+  align-self: end;
+  color: $neutral-0;
+  font-family: Inconsolata-Medium;
+  font-size: $font-size-30;
+  line-height: $line-height-110;
+  letter-spacing: $letter-spacing-minus-1;
+
+  @media (max-width: 700px) {
+    font-size: $font-size-20;
+  }
+
+}
+
+.github-nick {
+  display: flex;
+  align-items: center;
+  grid-column: 2;
+  grid-row: 2;
+  color: $neutral-300;
+  font-family: Inconsolata-Medium;
+  font-size: $font-size-20;
+  line-height: $line-height-120;
+  letter-spacing: $letter-spacing-minus-0-5;
+
+  @media (max-width: 700px) {
+    font-size: $font-size-14;
+  }
+
+}
+
+.ticket-number {
+  position: absolute;
+  top: 98px;
+  left: 531px;
+  width: 33px;
+  transform: rotate(90deg);
+  color: $neutral-500;
+  text-align: center;
+  font-family: Inconsolata-Medium;
+  font-size: $font-size-30;
+  line-height: $line-height-110;
+  letter-spacing: $letter-spacing-minus-1;
+
+  @media (max-width: 700px) {
+    top: 50px;
+    left: 303px;
+    width: 24px;
+    font-size: $font-size-22;
+  }
+
+}

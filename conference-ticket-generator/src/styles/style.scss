@@ -8,11 +8,14 @@
 @import './components/form';
 @import './components/logo';
 @import './components/field';
+@import './components/ticket';
 
 main {
   display: grid;
   place-items: center;
   margin: 0 16px;
+  min-height: 100vh;
+  height: 100%;
 }
 
 .hint-img {
