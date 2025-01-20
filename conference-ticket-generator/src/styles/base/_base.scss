@@ -6,7 +6,20 @@ main {
   height: 100%;
 }
 
+section {
+  display: grid;
+  place-items: center;
+}
+
 .hint-img {
   width: 16px;
   height: 16px;
+}
+
+.ticket-generator.hidden {
+  display: none;
+}
+
+.ticket-generated.hidden {
+  display: none;
 }

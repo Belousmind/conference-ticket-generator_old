@@ -7,63 +7,65 @@
 </head>
 <body>
   <main>
-
     <img src="./assets/images/logo-full.svg" alt="Conference ticket logo" class="logo">
 
-    <!-- <h1 class="main-heading">Your Journey to Coding Conf 2025 Starts Here!</h1>
-    <h2 class="sub-heading">Secure your spot at next year's biggest coding conference.</h2>
+    <section class="ticket-generator">
+      <h1 class="main-heading">Your Journey to Coding Conf 2025 Starts Here!</h1>
+      <h2 class="sub-heading">Secure your spot at next year's biggest coding conference.</h2>
 
-    <form action="">
-      <div class="upload-img-container">
-        <label for="file">Upload Avatar
-          <div class="field">
-            <div class="upload-icon-container">
-              <input type="file" id="file" name="file" accept=".png, .jpg, .jpeg" />
-              <img src="./assets/images/image-avatar.jpg" class="upload-img hidden">
-              <img class="upload-icon" src="./assets/images/icon-upload.svg" alt="upload icon">
+      <form action="">
+        <div class="upload-img-container">
+          <label for="file">Upload Avatar
+            <div class="field">
+              <div class="upload-icon-container">
+                <input type="file" id="file" name="file" accept=".png, .jpg, .jpeg" />
+                <img src="./assets/images/image-avatar.jpg" class="upload-img hidden">
+                <img class="upload-icon" src="./assets/images/icon-upload.svg" alt="upload icon">
+              </div>
+              <p class="instruction-text">Drag and drop or click to upload</p>
+              <div class="img-controls-btns hidden">
+                <button class="img-control-btn remove-img">Remove image</button>
+                <button class="img-control-btn change-img">Change image</button>
+              </div>
             </div>
-            <p class="instruction-text">Drag and drop or click to upload</p>
-             <div class="img-controls-btns hidden">
-              <button class="img-control-btn remove-img">Remove image</button>
-              <button class="img-control-btn change-img">Change image</button>
-             </div>
-          </div>
+          </label>
+          <p class="hint-text"> <img src="./assets/images/icon-info.svg" alt="info icon"> Upload your photo (JPG or PNG, max size: 500KB).</p>
+        </div>
+        
+        <label for="">Full Name
+          <input type="text" id="fullname">
         </label>
-         <p class="hint-text"> <img src="./assets/images/icon-info.svg" alt="info icon"> Upload your photo (JPG or PNG, max size: 500KB).</p>
-      </div>
-      
-      <label for="">Full Name
-        <input type="text" id="fullname">
-      </label>
+    
+        <label for="">Email Address
+          <input type="text" placeholder="example@email.com">
+        </label>
+        
+        <label for="">GitHub Username
+          <input type="text" placeholder="@yourusername">
+        </label>
+    
+        <input type="submit" value="Generate My Ticket">
+      </form>
+    </section>
+
+    <section class="ticket-generated hidden">
+      <h1 class="confirmation-title">Congrats, <span class="fullmane">Jonatan Kristof!</span> Your ticket is ready.</h1>
+      <p class="confirmation-details">We've emailed your ticket to <span class="emeil">jonatan@email.com</span> and will send updates in the run up to the event.</p>
   
-      <label for="">Email Address
-        <input type="text" placeholder="example@email.com">
-      </label>
-      
-      <label for="">GitHub Username
-        <input type="text" placeholder="@yourusername">
-      </label>
-  
-      <input type="submit" value="Generate My Ticket">
-    </form> -->
-
-    <h1 class="confirmation-title">Congrats, <span class="fullmane">Jonatan Kristof!</span> Your ticket is ready.</h1>
-    <p class="confirmation-details">We've emailed your ticket to <span class="emeil">jonatan@email.com</span> and will send updates in the run up to the event.</p>
-
-    <div class="ticket">
-      <img src="./assets/images/logo-mark.svg" alt="Coding Conf Logo" class="logo-mark">
-      <div class="event-info">
-        <p class="event-name">Coding Conf</p>
-        <p class="event-data">Jan 31, 2025<span>/</span>Austin, TX</p>
+      <div class="ticket">
+        <img src="./assets/images/logo-mark.svg" alt="Coding Conf Logo" class="logo-mark">
+        <div class="event-info">
+          <p class="event-name">Coding Conf</p>
+          <p class="event-data">Jan 31, 2025<span>/</span>Austin, TX</p>
+        </div>
+        <div class="speaker-info">
+          <img src="./assets/images/image-avatar.jpg" alt="" class="speaker-avatar">
+          <p class="speaker-name">Jonatan Kristof</p>
+          <p class="github-nick"><img src="./assets/images/icon-github.svg" alt="GitHub Icon"> @jonatankristof0101</p>
+        </div>
+        <p class="ticket-number">#01609</p>
       </div>
-      <div class="speaker-info">
-        <img src="./assets/images/image-avatar.jpg" alt="" class="speaker-avatar">
-        <p class="speaker-name">Jonatan Kristof</p>
-        <p class="github-nick"><img src="./assets/images/icon-github.svg" alt="GitHub Icon"> @jonatankristof0101</p>
-      </div>
-      <p class="ticket-number">#01609</p>
-    </div>
-
+    </section>
   </main>
 </body>
 </html>
