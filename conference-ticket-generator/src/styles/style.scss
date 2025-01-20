@@ -3,22 +3,11 @@
 @import './abstracts/variables';
 @import './components/input';
 @import './components/button';
-@import './components/background';
-@import './components/typography';
+@import './base/background';
+@import './base/typography';
 @import './components/form';
 @import './components/logo';
 @import './components/field';
 @import './components/ticket';
+@import './base/base';
 
-main {
-  display: grid;
-  place-items: center;
-  margin: 0 16px;
-  min-height: 100vh;
-  height: 100%;
-}
-
-.hint-img {
-  width: 16px;
-  height: 16px;
-}
