@@ -18,3 +18,34 @@ input[type="submit"] {
     box-shadow: 0px 0px 0px 3px $neutral-900, 0px 0px 0px 4px $neutral-0;
   }
 }
+
+.img-controls-btns {
+  display: flex;
+  gap: $spacing-100;
+  &.hidden {
+    display: none;
+  }
+}
+
+.img-control-btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: $spacing-050 $spacing-100;
+  border-radius: $radius-4;
+  background: rgba(255, 255, 255, 0.10);
+  font-family: Inconsolata-Regular;
+  font-size: $font-size-12;
+  line-height: $line-height-120;
+  letter-spacing: $letter-spacing-minus-0-2;
+}
+
+.remove-img {
+  color: $neutral-300;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+}
+
+.change-img {
+  color: $neutral-0;
+}

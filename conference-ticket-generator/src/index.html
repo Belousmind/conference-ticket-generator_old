@@ -14,16 +14,21 @@
     <h2 class="sub-heading">Secure your spot at next year's biggest coding conference.</h2>
 
     <form action="">
-      <label for="file">Upload Avatar
-        <div class="field">
-          <div class="upload-icon-container">
-            <input type="file" id="file" name="file" accept=".png, .jpg, .jpeg" />
-            <img class="upload-icon" src="./assets/images/icon-upload.svg" alt="upload icon">
-          </div>
-          <p class="instruction-text">Drag and drop or click to upload</p>
-        </div>
-      </label>
       <div class="upload-img-container">
+        <label for="file">Upload Avatar
+          <div class="field">
+            <div class="upload-icon-container">
+              <input type="file" id="file" name="file" accept=".png, .jpg, .jpeg" />
+              <img src="./assets/images/image-avatar.jpg" class="upload-img hidden">
+              <img class="upload-icon" src="./assets/images/icon-upload.svg" alt="upload icon">
+            </div>
+            <p class="instruction-text">Drag and drop or click to upload</p>
+             <div class="img-controls-btns hidden">
+              <button class="img-control-btn remove-img">Remove image</button>
+              <button class="img-control-btn change-img">Change image</button>
+             </div>
+          </div>
+        </label>
          <p class="hint-text"> <img src="./assets/images/icon-info.svg" alt="info icon"> Upload your photo (JPG or PNG, max size: 500KB).</p>
       </div>
       

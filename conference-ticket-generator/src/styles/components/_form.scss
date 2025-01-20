@@ -3,12 +3,14 @@ form {
   width: 100%;
   display: grid;
   gap: $spacing-300;
+  margin-bottom: 134px;
 
   @media(max-width: 768px) {
     max-width: 522px;
   }
   @media(max-width: 375px) {
     max-width: 343px;
+    margin-bottom: 114px;
   }
 
 }

@@ -31,3 +31,8 @@ input[type="text"] {
     border: 1px solid $orange-500;
   }
 }
+
+input[type="file"] {
+  opacity: 0;
+  display: none;
+}

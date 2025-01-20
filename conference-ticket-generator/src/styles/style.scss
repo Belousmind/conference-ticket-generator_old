@@ -5,14 +5,17 @@
 @import './components/button';
 @import './components/background';
 @import './components/typography';
-@import './components/forms';
-
-input[type="file"] {
-  display: none;
-}
+@import './components/form';
+@import './components/logo';
+@import './components/field';
 
 main {
   display: grid;
   place-items: center;
+  margin: 0 16px;
+}
 
+.hint-img {
+  width: 16px;
+  height: 16px;
 }
