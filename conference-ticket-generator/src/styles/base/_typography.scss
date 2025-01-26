@@ -60,10 +60,10 @@ label {
   font-size: $font-size-12;
   line-height: $line-height-120;
   letter-spacing: $letter-spacing-minus-0-2;
-  display: flex;
-  align-items: center;
-  gap: $spacing-100;
   margin: 0;
+  // &.warning {
+  //   color: $orange-500;
+  // }
 }
 
 .confirmation-title {

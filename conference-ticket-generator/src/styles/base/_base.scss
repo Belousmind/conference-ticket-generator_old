@@ -11,15 +11,39 @@ section {
   place-items: center;
 }
 
-.hint-img {
-  width: 16px;
-  height: 16px;
-}
-
 .ticket-generator.hidden {
   display: none;
 }
 
 .ticket-generated.hidden {
   display: none;
+}
+
+.hint {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: $spacing-100;
+
+  .hint-icon .circle,
+  .hint-icon .line-path {
+    stroke: $neutral-300;
+  }
+
+  .hint-icon .fill-path {
+    fill: $neutral-300;
+  }
+
+  &.warning .hint-text{
+    color: $orange-500;
+  }
+
+  &.warning .hint-icon .circle,
+  &.warning .hint-icon .line-path {
+    stroke: $orange-500;
+  }
+
+  &.warning .hint-icon .fill-path {
+    fill: $orange-500;
+  }
 }

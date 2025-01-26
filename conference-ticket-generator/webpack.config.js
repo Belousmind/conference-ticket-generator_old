@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.ts',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -33,6 +33,11 @@ module.exports = {
           'sass-loader',
         ],
       },
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
     ],
   },
   plugins: [
@@ -50,5 +55,6 @@ module.exports = {
       '@': path.resolve(__dirname, 'src'),
     },
   },
+  // devtool: 'source-map',
   mode: 'development',
 }
