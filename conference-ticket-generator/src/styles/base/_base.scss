@@ -19,12 +19,20 @@ section {
   display: none;
 }
 
+.upload-img-container {
+  & .hint {
+    display: flex;
+    margin-top: 0;
+  }
+}
+
 .hint {
   margin: 0;
-  display: flex;
+  display: none;
   align-items: center;
   gap: $spacing-100;
-
+  margin-top: $spacing-150;
+  
   .hint-icon .circle,
   .hint-icon .line-path {
     stroke: $neutral-300;

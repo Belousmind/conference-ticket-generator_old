@@ -40,15 +40,39 @@
         </div>
         
         <label for="fullname">Full Name
-          <input type="text" id="fullname" required>
+          <input type="text" id="fullname" pattern="^[A-Za-z]+ [A-Za-z]+$">
+          <p class="hint">
+            <svg class="hint-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 8C2 11.3133 4.68605 14 8 14C11.3139 14 14 11.3133 14 8C14 4.68605 11.3139 2 8 2C4.68605 2 2 4.68605 2 8Z" stroke-linecap="round" stroke-linejoin="round" class="circle"/>
+              <path d="M8.0038 10.4621V7.59573V10.4621ZM8 5.5695V5.52734V5.5695Z" class="fill-path"/>
+              <path d="M8.0038 10.4621V7.59573M8 5.5695V5.52734" stroke-linecap="round" stroke-linejoin="round" class="line-path"/>
+            </svg>
+            <span class="hint-text">Please enter a valid Full Name.</span>
+          </p>
         </label>
     
         <label for="email-input">Email Address
-          <input type="text" id="email-input" placeholder="example@email.com">
+          <input type="email" id="email-input" placeholder="example@email.com">
+          <p class="hint">
+            <svg class="hint-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 8C2 11.3133 4.68605 14 8 14C11.3139 14 14 11.3133 14 8C14 4.68605 11.3139 2 8 2C4.68605 2 2 4.68605 2 8Z" stroke-linecap="round" stroke-linejoin="round" class="circle"/>
+              <path d="M8.0038 10.4621V7.59573V10.4621ZM8 5.5695V5.52734V5.5695Z" class="fill-path"/>
+              <path d="M8.0038 10.4621V7.59573M8 5.5695V5.52734" stroke-linecap="round" stroke-linejoin="round" class="line-path"/>
+            </svg>
+            <span class="hint-text">Please enter a valid email address.</span>
+          </p>
         </label>
         
         <label for="github-input">GitHub Username
-          <input type="text" id="github-input" placeholder="@yourusername" required>
+          <input type="text" id="github-input" placeholder="@yourusername" pattern="^@[a-zA-Z0-9\-]{1,39}$">
+          <p class="hint">
+            <svg class="hint-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 8C2 11.3133 4.68605 14 8 14C11.3139 14 14 11.3133 14 8C14 4.68605 11.3139 2 8 2C4.68605 2 2 4.68605 2 8Z" stroke-linecap="round" stroke-linejoin="round" class="circle"/>
+              <path d="M8.0038 10.4621V7.59573V10.4621ZM8 5.5695V5.52734V5.5695Z" class="fill-path"/>
+              <path d="M8.0038 10.4621V7.59573M8 5.5695V5.52734" stroke-linecap="round" stroke-linejoin="round" class="line-path"/>
+            </svg>
+            <span class="hint-text">Please enter a valid GitHub username.</span>
+          </p>
         </label>
     
         <input type="submit" value="Generate My Ticket" required>
