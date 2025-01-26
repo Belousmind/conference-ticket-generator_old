@@ -28,6 +28,14 @@ input[type="email"] {
     box-shadow: 0px 0px 0px 3px $neutral-900, 0px 0px 0px 5px $neutral-500;
   }
 
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+  border: 1px solid $neutral-500;
+  -webkit-text-fill-color: $neutral-0;
+  transition: background-color 5000s ease-in-out 0s;
+  }
+  
   &:invalid {
     border: 1px solid $orange-500;
 
@@ -43,7 +51,7 @@ input[type="email"] {
         .line-path {
           stroke: $orange-500;
         }
-        
+
         .fill-path {
           fill: $orange-500;
         }
