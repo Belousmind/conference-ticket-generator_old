@@ -97,28 +97,37 @@ changeImgBtn.addEventListener('click', (event): void => {
   fileInput.click();
 });
 
+const nameInput = document.querySelector('#fullname') as HTMLInputElement;
+const emailInput = document.querySelector('#email-input') as HTMLInputElement;
+const githubInput = document.querySelector('#github-input') as HTMLInputElement;
+
+const inputsArr: HTMLInputElement[] = [nameInput, emailInput, githubInput];
+
+const check = (element: HTMLInputElement):void => {
+  if (element.value.length < 3) {
+    element.classList.add('invalid');
+    element.nextElementSibling?.classList.add('warning');
+  } else {
+    element.classList.remove('invalid');
+    element.nextElementSibling?.classList.remove('warning');
+  }
+}
+
+inputsArr.forEach(element => {
+  element.addEventListener('input', () =>{
+    check(element);
+  })
+})
+
 const formHandler = (event: Event): void => {
   event.preventDefault();
 
-  const nameInput = document.querySelector('#fullname') as HTMLInputElement;
-  const emailInput = document.querySelector('#email-input') as HTMLInputElement;
-  const githubInput = document.querySelector('#github-input') as HTMLInputElement;
-
-  const inputsArr: HTMLInputElement[] = [nameInput, emailInput, githubInput];
-
   const checkAll = inputsArr.every(item => item.checkValidity() && item.value.length > 3);
-
-  const check = (element: HTMLInputElement):void => {
-    if (element.value.length < 3) {
-      element.nextElementSibling?.classList.add('warning');
-    } else {
-      element.nextElementSibling?.classList.remove('warning');
-    }
-  }
 
   if (checkAll && fileUrl !== null) {
     inputsArr.forEach(element => {
       obj[element.id] = element.value.trim();
+      element.classList.remove('invalid');
       element.nextElementSibling?.classList.remove('warning');
     });
 

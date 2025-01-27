@@ -36,6 +36,7 @@ input[type="email"] {
   transition: background-color 5000s ease-in-out 0s;
   }
   
+  &.invalid,
   &:invalid {
     border: 1px solid $orange-500;
 
@@ -62,5 +63,4 @@ input[type="email"] {
 
 input[type="file"] {
   opacity: 0;
-  // visibility: hidden;
 }
