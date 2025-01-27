@@ -13,10 +13,12 @@
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(2.5px);
   transition: .2s ease-out;
+  &.hover,
   &:hover {
     background: rgba(255, 255, 255, 0.20);
   }
   
+  &.hover,
   &:hover .upload-icon-container {
     border: 1px solid $neutral-500;
   }
