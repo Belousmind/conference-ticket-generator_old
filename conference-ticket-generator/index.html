@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conference Ticket Generator</title>
+<link rel="icon" href="favicon.ico"><script defer src="bundle.js"></script></head>
+<body>
+  <main>
+    <img src="./assets/images/logo-full.svg" alt="Conference ticket logo" class="logo">
+
+    <section class="ticket-form">
+      <h1 class="main-heading">Your Journey to Coding Conf 2025 Starts Here!</h1>
+      <h2 class="sub-heading">Secure your spot at next year's biggest coding conference.</h2>
+
+      <form >
+        <div class="upload-img-container">
+          <label for="file-load">Upload Avatar
+            <div class="field">
+              <div class="upload-icon-container">
+                <input type="file" id="file-load" name="file" accept=".png, .jpg, .jpeg" required/>
+                <img src="./assets/images/image-avatar.jpg" class="upload-img hidden">
+                <img class="upload-icon" src="./assets/images/icon-upload.svg" alt="upload icon">
+              </div>
+              <p class="instruction-text">Drag and drop or click to upload</p>
+              <div class="img-controls-btns hidden">
+                <button class="img-control-btn remove-img">Remove image</button>
+                <button class="img-control-btn change-img">Change image</button>
+              </div>
+            </div>
+          </label>
+          <p class="hint">
+            <svg class="hint-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 8C2 11.3133 4.68605 14 8 14C11.3139 14 14 11.3133 14 8C14 4.68605 11.3139 2 8 2C4.68605 2 2 4.68605 2 8Z" stroke-linecap="round" stroke-linejoin="round" class="circle"/>
+              <path d="M8.0038 10.4621V7.59573V10.4621ZM8 5.5695V5.52734V5.5695Z" class="fill-path"/>
+              <path d="M8.0038 10.4621V7.59573M8 5.5695V5.52734" stroke-linecap="round" stroke-linejoin="round" class="line-path"/>
+            </svg>
+            <span class="hint-text">Upload your photo (JPG or PNG, max size: 500KB).</span>
+          </p>
+        </div>
+        
+        <label for="fullname">Full Name
+          <input type="text" id="fullname" pattern="^[A-Za-z]+ [A-Za-z]+$">
+          <p class="hint">
+            <svg class="hint-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 8C2 11.3133 4.68605 14 8 14C11.3139 14 14 11.3133 14 8C14 4.68605 11.3139 2 8 2C4.68605 2 2 4.68605 2 8Z" stroke-linecap="round" stroke-linejoin="round" class="circle"/>
+              <path d="M8.0038 10.4621V7.59573V10.4621ZM8 5.5695V5.52734V5.5695Z" class="fill-path"/>
+              <path d="M8.0038 10.4621V7.59573M8 5.5695V5.52734" stroke-linecap="round" stroke-linejoin="round" class="line-path"/>
+            </svg>
+            <span class="hint-text">Please enter a valid Full Name.</span>
+          </p>
+        </label>
+    
+        <label for="email-input">Email Address
+          <input type="email" id="email-input" placeholder="example@email.com">
+          <p class="hint">
+            <svg class="hint-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 8C2 11.3133 4.68605 14 8 14C11.3139 14 14 11.3133 14 8C14 4.68605 11.3139 2 8 2C4.68605 2 2 4.68605 2 8Z" stroke-linecap="round" stroke-linejoin="round" class="circle"/>
+              <path d="M8.0038 10.4621V7.59573V10.4621ZM8 5.5695V5.52734V5.5695Z" class="fill-path"/>
+              <path d="M8.0038 10.4621V7.59573M8 5.5695V5.52734" stroke-linecap="round" stroke-linejoin="round" class="line-path"/>
+            </svg>
+            <span class="hint-text">Please enter a valid email address.</span>
+          </p>
+        </label>
+        
+        <label for="github-input">GitHub Username
+          <input type="text" id="github-input" placeholder="@yourusername" pattern="^@[a-zA-Z0-9\-]{1,39}$">
+          <p class="hint">
+            <svg class="hint-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 8C2 11.3133 4.68605 14 8 14C11.3139 14 14 11.3133 14 8C14 4.68605 11.3139 2 8 2C4.68605 2 2 4.68605 2 8Z" stroke-linecap="round" stroke-linejoin="round" class="circle"/>
+              <path d="M8.0038 10.4621V7.59573V10.4621ZM8 5.5695V5.52734V5.5695Z" class="fill-path"/>
+              <path d="M8.0038 10.4621V7.59573M8 5.5695V5.52734" stroke-linecap="round" stroke-linejoin="round" class="line-path"/>
+            </svg>
+            <span class="hint-text">Please enter a valid GitHub username.</span>
+          </p>
+        </label>
+    
+        <input type="submit" value="Generate My Ticket" required>
+      </form>
+    </section>
+
+    <section class="ticket-generated hidden">
+      <h1 class="confirmation-title">Congrats, <span class="fullname">Jonatan Kristof!</span> Your ticket is ready.</h1>
+      <p class="confirmation-details">We've emailed your ticket to <span class="email">jonatan@email.com</span> and will send updates in the run up to the event.</p>
+  
+      <div class="ticket">
+        <img src="./assets/images/logo-mark.svg" alt="Coding Conf Logo" class="logo-mark">
+        <div class="event-info">
+          <p class="event-name">Coding Conf</p>
+          <p class="event-data">Jan 31, 2025<span>/</span>Austin, TX</p>
+        </div>
+        <div class="speaker-info">
+          <img src="./assets/images/image-avatar.jpg" alt="Speaker Avatar" class="speaker-avatar">
+          <p class="speaker-name">Jonatan Kristof</p>
+          <p class="github-nick"><img src="./assets/images/icon-github.svg" alt="GitHub Icon"><span class="github-nick-span">@jonatankristof0101</span></p>
+        </div>
+        <p class="ticket-number">#01609</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
