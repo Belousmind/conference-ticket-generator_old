@@ -11,7 +11,7 @@ section {
   place-items: center;
 }
 
-.ticket-generator.hidden {
+.ticket-form.hidden {
   display: none;
 }
 
@@ -40,6 +40,10 @@ section {
 
   .hint-icon .fill-path {
     fill: $neutral-300;
+  }
+
+  &.warning {
+    display: flex;
   }
 
   &.warning .hint-text{

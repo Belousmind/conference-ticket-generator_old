@@ -2,12 +2,6 @@ import './styles/style.scss';
 
 const submitForm = document.querySelector('input[type="submit"]') as HTMLInputElement;
 
-const formHandler = (event: Event): void => {
-  event.preventDefault();
-};
-
-submitForm.addEventListener('click', (event): void => formHandler(event));
-
 let fileUrl: string | null = null;
 
 const fileInput = document.querySelector('#file-load') as HTMLInputElement;
@@ -29,6 +23,8 @@ const field = document.querySelector('.field') as HTMLDivElement;
 const active = (): void => field?.classList.add('hover');
 const inactive = (): void => field?.classList.remove('hover');
 
+const obj: Record<string, string> = {};
+
 const uploadFile = (file: File) => {
   if (file.size > 500 * 1024) {
     hint.classList.add('warning');
@@ -40,12 +36,13 @@ const uploadFile = (file: File) => {
   hintText.textContent = 'Upload your photo (JPG or PNG, max size: 500KB).';
 
   uploadIcon.classList.add('hidden');
-  instructionText?.classList.add('hidden');
+  instructionText.classList.add('hidden');
 
   imgControlsBtns.classList.remove('hidden');
   uploadImg.classList.remove('hidden');
 
   fileUrl = URL.createObjectURL(file);
+  obj.url = fileUrl;
   uploadImg.src = fileUrl;
 }
 
@@ -95,7 +92,63 @@ removeImgBtn.addEventListener('click', (event): void => {
   uploadImg.src = '';
 });
 
-changeImgBtn?.addEventListener('click', (event): void => {
+changeImgBtn.addEventListener('click', (event): void => {
   event.preventDefault();
   fileInput.click();
 });
+
+const formHandler = (event: Event): void => {
+  event.preventDefault();
+
+  const nameInput = document.querySelector('#fullname') as HTMLInputElement;
+  const emailInput = document.querySelector('#email-input') as HTMLInputElement;
+  const githubInput = document.querySelector('#github-input') as HTMLInputElement;
+
+  const inputsArr: HTMLInputElement[] = [nameInput, emailInput, githubInput];
+
+  const checkAll = inputsArr.every(item => item.checkValidity() && item.value.length > 3);
+
+  const check = (element: HTMLInputElement):void => {
+    if (element.value.length < 3) {
+      element.nextElementSibling?.classList.add('warning');
+    } else {
+      element.nextElementSibling?.classList.remove('warning');
+    }
+  }
+
+  if (checkAll && fileUrl !== null) {
+    inputsArr.forEach(element => {
+      obj[element.id] = element.value.trim();
+      element.nextElementSibling?.classList.remove('warning');
+    });
+
+    launchTicket();
+
+  } else {
+    inputsArr.forEach(element => check(element));
+  }
+
+}
+
+submitForm.addEventListener('click', (event): void => formHandler(event));
+
+const ticketForm = document.querySelector('.ticket-form') as HTMLDivElement;
+const ticketGenerated = document.querySelector('.ticket-generated') as HTMLDivElement;
+
+const launchTicket = () => {
+  ticketForm.classList.add('hidden');
+  ticketGenerated.classList.remove('hidden');
+
+  const avatar = document.querySelector('.speaker-avatar') as HTMLImageElement;
+  const email = document.querySelector('.email') as HTMLSpanElement;
+  const name = document.querySelector('.speaker-name') as HTMLParagraphElement;
+  const fullname = document.querySelector('.fullname') as HTMLSpanElement;
+  const githubNick = document.querySelector('.github-nick-span') as HTMLParagraphElement;
+
+  avatar.src = obj.url;
+  email.innerText = obj['email-input'];
+  name.innerHTML = obj.fullname;
+  fullname.innerHTML = obj.fullname;
+  githubNick.innerText = obj['github-input'];
+
+}

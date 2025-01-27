@@ -88,7 +88,8 @@ label {
   
 }
 
-.fullmane {
+.fullname {
+  text-transform: capitalize;
   background: linear-gradient(90deg, #F57463 0%, #FFF 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -116,7 +117,7 @@ label {
   }
 }
 
-.emeil {
+.email {
   color: $orange-500;
 }
 
@@ -153,6 +154,7 @@ label {
 }
 
 .speaker-name {
+  text-transform: capitalize;
   grid-column: 2;
   align-self: end;
   color: $neutral-0;
@@ -164,7 +166,6 @@ label {
   @media (max-width: 700px) {
     font-size: $font-size-20;
   }
-
 }
 
 .github-nick {
