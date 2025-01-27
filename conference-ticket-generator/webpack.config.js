@@ -12,7 +12,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(png|jpe?g|gif|svg)$/,
+        test: /\.(png|jpe?g|gif|svg|ico)$/,
         type: 'asset/resource',
         generator: {
           filename: 'assets/images/[name][ext]',
@@ -43,10 +43,11 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
+      favicon: './src/assets/favicon.ico'
     }),
     new CopyPlugin({
       patterns: [
-        { from: 'src/assets', to: 'assets' }, // Копирует папку assets
+        { from: 'src/assets', to: 'assets' },
       ],
     })
   ],
