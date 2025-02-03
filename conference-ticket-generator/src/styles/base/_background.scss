@@ -1,12 +1,13 @@
 body {
   width: 100%;
+  background-color: $neutral-900;
   background:
     url('@/assets/images/pattern-circle.svg') no-repeat top 534px left 938px,
     url('@/assets/images/pattern-circle.svg') no-repeat top -85px left 44px,
     url('@/assets/images/pattern-squiggly-line-top.svg') no-repeat top 75px right,
     url('@/assets/images/pattern-squiggly-line-bottom.svg') no-repeat bottom left,
     url('@/assets/images/pattern-lines.svg') no-repeat center,
-    url('@/assets/images/background-desktop.png') no-repeat center;
+    url('@/assets/images/background-desktop.webp') no-repeat center;
   background-size: auto, auto, auto, auto, cover, cover;
   background-origin: border-box;
 
@@ -17,7 +18,7 @@ body {
       url('@/assets/images/pattern-squiggly-line-top.svg') no-repeat top 55px right,
       url('@/assets/images/pattern-squiggly-line-bottom.svg') no-repeat bottom left,
       url('@/assets/images/pattern-lines.svg') no-repeat center,
-      url('@/assets/images/background-tablet.png') no-repeat center;
+      url('@/assets/images/background-tablet.webp') no-repeat center;
     background-size: auto, auto, 232px 109px, 396px 276px, cover, cover;
   }
 
@@ -28,7 +29,7 @@ body {
       url('@/assets/images/pattern-squiggly-line-top.svg') no-repeat top 22px right,
       url('@/assets/images/pattern-squiggly-line-bottom.svg') no-repeat bottom left,
       url('@/assets/images/pattern-lines.svg') no-repeat center,
-      url('@/assets/images/background-mobile.png') no-repeat center;
+      url('@/assets/images/background-mobile.webp') no-repeat center;
     background-size: 107px 107px, 107px 107px, 112px 52px, 301px 210px, cover, cover;
   }
 }
